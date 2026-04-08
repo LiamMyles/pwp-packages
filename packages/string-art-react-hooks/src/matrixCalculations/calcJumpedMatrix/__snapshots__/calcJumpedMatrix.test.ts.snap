@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getJumpedPoints should match assortment of options 1`] = `
+Array [
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+]
+`;
+
+exports[`getJumpedPoints should match assortment of options 2`] = `
+Array [
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 3,
+    "y": 4,
+  },
+  Object {
+    "x": 2,
+    "y": 3,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 3,
+    "y": 4,
+  },
+  Object {
+    "x": 2,
+    "y": 3,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 3,
+    "y": 4,
+  },
+  Object {
+    "x": 2,
+    "y": 3,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 3,
+    "y": 4,
+  },
+  Object {
+    "x": 2,
+    "y": 3,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+  Object {
+    "x": 3,
+    "y": 4,
+  },
+  Object {
+    "x": 2,
+    "y": 3,
+  },
+  Object {
+    "x": 1,
+    "y": 2,
+  },
+]
+`;
+
+exports[`getJumpedPoints should match assortment of options 3`] = `
+Array [
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+]
+`;
+
+exports[`getJumpedPoints should match assortment of options 4`] = `
+Array [
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 1,
+    "y": 1,
+  },
+  Object {
+    "x": 0,
+    "y": 0,
+  },
+  Object {
+    "x": 1,
+    "y": 0,
+  },
+  Object {
+    "x": 0,
+    "y": 1,
+  },
+]
+`;

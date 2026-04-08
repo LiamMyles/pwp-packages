@@ -18,7 +18,7 @@
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp",
+    "release": "bumpp --commit 'Release string-art v'",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {

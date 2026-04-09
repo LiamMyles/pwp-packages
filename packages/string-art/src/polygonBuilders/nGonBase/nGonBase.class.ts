@@ -2,7 +2,7 @@ import { type NGonMetadata } from "MatrixCalculations/calcLineDensity"
 
 import type { INGonBuilderPublic, Vertices } from "../n-gon.types"
 
-export abstract class NGonBuilder implements INGonBuilderPublic {
+export abstract class NGonBase implements INGonBuilderPublic {
   private recalculateVertices: boolean
   private recalculateNGonMetadata: boolean
 

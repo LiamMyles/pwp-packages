@@ -9,11 +9,11 @@ import type {
   INGonVertices,
   NGonInputs,
 } from "PolygonBuilders/n-gon.types"
-import { NGonBuilder } from "PolygonBuilders/nGonBuilder"
+import { NGonBase } from "PolygonBuilders/nGonBase"
 import { calcNGonMetadata } from "MatrixCalculations/calcLineDensity"
 
 export class NGonSpirals
-  extends NGonBuilder
+  extends NGonBase
   implements INGonVertices, INGonJumps, INGonSpirals
 {
   jumps: number[]

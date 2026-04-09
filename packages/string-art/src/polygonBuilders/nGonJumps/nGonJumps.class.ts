@@ -12,12 +12,9 @@ import type {
   INGonJumps,
 } from "../n-gon.types"
 
-import { NGonBuilder } from "PolygonBuilders/nGonBuilder"
+import { NGonBase } from "PolygonBuilders/nGonBase"
 
-export class NGonJumps
-  extends NGonBuilder
-  implements INGonJumps, INGonVertices
-{
+export class NGonJumps extends NGonBase implements INGonJumps, INGonVertices {
   jumps: number[]
   vertices: number
 

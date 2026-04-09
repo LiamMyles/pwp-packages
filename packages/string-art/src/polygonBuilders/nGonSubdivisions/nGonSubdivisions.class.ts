@@ -8,7 +8,7 @@ import { calcPointsMatrix } from "MatrixCalculations/calcPointsMatrix"
 import { calcSubdivisionMatrix } from "MatrixCalculations/calcSubdivisionMatrix"
 import type { VerticesMatrix } from "MatrixCalculations/types"
 
-import { NGonBuilder } from "PolygonBuilders/nGonBuilder"
+import { NGonBase } from "PolygonBuilders/nGonBase"
 import type {
   INGonVertices,
   INGonJumps,
@@ -18,7 +18,7 @@ import type {
 } from "PolygonBuilders/n-gon.types"
 
 export class NGonSubdivisions
-  extends NGonBuilder
+  extends NGonBase
   implements INGonVertices, INGonJumps, INGonSubdivided
 {
   vertices: number

@@ -5,9 +5,9 @@ import {
 import { calcNGonVertices } from "MatrixCalculations/calcNGonVertices"
 
 import type { NGonInputs, INGonVertices, Vertices } from "../n-gon.types"
-import { NGonBuilder } from "PolygonBuilders/nGonBuilder"
+import { NGonBase } from "PolygonBuilders/nGonBase"
 
-export class NGon extends NGonBuilder implements INGonVertices {
+export class NGon extends NGonBase implements INGonVertices {
   vertices
 
   constructor({ vertices }: Pick<NGonInputs, "vertices">) {

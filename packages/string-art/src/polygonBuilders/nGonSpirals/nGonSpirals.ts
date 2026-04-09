@@ -59,12 +59,11 @@ export class NGonSpirals
   }
 
   protected calculateMetadata() {
-    return calcNGonMetadata({
-      vertices: this.vertices,
-      subdivisions: 1,
-      points: 1,
-      jumps: this.jumps,
-    })
+    return {
+      lineDensity: this.verticesMatrix.length - 1,
+      subdivisionCommonFactor: 0,
+      verticesCommonFactor: 0,
+    }
   }
   protected calculateVertices() {
     const initialMatrix = calcNGonVertices(this.vertices)

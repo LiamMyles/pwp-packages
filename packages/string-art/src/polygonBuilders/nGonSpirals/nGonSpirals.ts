@@ -10,7 +10,6 @@ import type {
   NGonInputs,
 } from "PolygonBuilders/n-gon.types"
 import { NGonBase } from "PolygonBuilders/nGonBase"
-import { calcNGonMetadata } from "MatrixCalculations/calcLineDensity"
 
 export class NGonSpirals
   extends NGonBase

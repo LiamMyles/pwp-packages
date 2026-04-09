@@ -85,4 +85,30 @@ export class NGonSubdivisions
     )
     return pointsMatrix
   }
+
+  setPointsToNextStableSCF(): void {
+    let currentLoop = 0
+    let isNextSCF = false
+    const effectiveJumps = this.jumps.length === 0 ? 1 : this.jumps.length
+    const maxPoints = this.vertices * effectiveJumps * this.subdivisions
+
+    while (isNextSCF === false || currentLoop > 50) {
+      currentLoop = currentLoop + 1
+
+      if (currentLoop >= 50) {
+        throw new Error("Max loop depth reached")
+      }
+
+      this.setPoints(this.points + 1)
+      if (this.points === maxPoints) {
+        this.setPoints(1)
+      }
+
+      const { subdivisionCommonFactor } = this.getNGonMetadata()
+
+      if (subdivisionCommonFactor === 1) {
+        isNextSCF = true
+      }
+    }
+  }
 }

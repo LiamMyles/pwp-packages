@@ -1,7 +1,7 @@
 {
   "name": "@chthonic/string-art",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Playing with Polygons logical modules",
   "author": "Liam Myles",
   "license": "MIT",

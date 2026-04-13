@@ -18,10 +18,10 @@ Jumps are a sequence of counting before connecting the line, similar to points. 
 
 This packages repo contains a `draw-cli-demo.ts` which you can review and run to generate the following below.
 
-![nGon example](image-1.png)
-![nGonJumps example](image-2.png)
-![nGonSubdivisions example](image-4.png)
-![nGonSpiral example](image-3.png)
+![nGon example](https://raw.githubusercontent.com/LiamMyles/pwp-packages/refs/heads/main/packages/string-art/image-1.png)
+![nGonJumps example](https://raw.githubusercontent.com/LiamMyles/pwp-packages/refs/heads/main/packages/string-art/image-2.png)
+![nGonSubdivisions example](https://raw.githubusercontent.com/LiamMyles/pwp-packages/refs/heads/main/packages/string-art/image-4.png)
+![nGonSpiral example](https://raw.githubusercontent.com/LiamMyles/pwp-packages/refs/heads/main/packages/string-art/image-3.png)
 
 ## Usage
 

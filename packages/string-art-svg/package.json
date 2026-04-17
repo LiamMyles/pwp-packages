@@ -15,8 +15,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/svg-generator.js",
+      "require": "./dist/svg-generator.cjs"
     },
     "./package.json": "./package.json"
   },
@@ -27,6 +27,7 @@
     "dist"
   ],
   "scripts": {
+    "prebuild": "pnpm run typecheck",
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
@@ -47,7 +48,7 @@
     "@chthonic/string-art": "workspace:*",
     "yargs": "^18.0.0"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.cts"
+  "main": "./dist/svg-generator.cjs",
+  "module": "./dist/svg-generator.js",
+  "types": "./dist/svg-generator.d.cts"
 }

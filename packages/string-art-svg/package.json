@@ -2,17 +2,10 @@
   "name": "@chthonic/string-art-svg",
   "type": "module",
   "version": "0.0.0",
-  "description": "A starter for creating a TypeScript package.",
+  "description": "String art polygon SVG generator",
   "author": "Author Name <author.name@mail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/author/library#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/author/library.git"
-  },
-  "bugs": {
-    "url": "https://github.com/author/library/issues"
-  },
+  "homepage": "https://github.com/LiamMyles/pwp-packages/tree/main/packages/string-art-svg",
   "exports": {
     ".": {
       "import": "./dist/svg-generator.js",

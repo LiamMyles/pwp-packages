@@ -2,7 +2,7 @@
   "name": "@chthonic/string-art",
   "type": "module",
   "version": "0.0.5",
-  "description": "Playing with Polygons logical modules",
+  "description": "String art polygon generator",
   "author": "Liam Myles",
   "license": "MIT",
   "homepage": "https://github.com/LiamMyles/pwp-packages/tree/main/packages/string-art",

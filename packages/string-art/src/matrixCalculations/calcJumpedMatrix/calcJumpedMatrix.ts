@@ -1,9 +1,9 @@
-import type { VerticesMatrix } from "MatrixCalculations/types"
+import type { VerticesMatrix } from "CommonTypes"
 
 export function calcJumpedMatrix(
-  initialVertices: VerticesMatrix[],
+  initialVertices: VerticesMatrix,
   ...jumps: number[]
-): VerticesMatrix[] {
+): VerticesMatrix {
   if (jumps.length !== 0) {
     let lastValue = 0
     const jumpedMatrix = [

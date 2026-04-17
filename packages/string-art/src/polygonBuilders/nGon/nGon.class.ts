@@ -4,7 +4,7 @@ import {
 } from "MatrixCalculations/calcLineDensity"
 import { calcNGonVertices } from "MatrixCalculations/calcNGonVertices"
 
-import type { NGonInputs, INGonVertices, Vertices } from "../n-gon.types"
+import type { NGonInputs, INGonVertices, VerticesMatrix } from "CommonTypes"
 import { NGonBase } from "PolygonBuilders/nGonBase"
 
 export class NGon extends NGonBase implements INGonVertices {
@@ -29,7 +29,7 @@ export class NGon extends NGonBase implements INGonVertices {
     })
   }
 
-  protected calculateVertices(): Vertices[] {
+  protected calculateVertices(): VerticesMatrix {
     return calcNGonVertices(this.vertices)
   }
 }

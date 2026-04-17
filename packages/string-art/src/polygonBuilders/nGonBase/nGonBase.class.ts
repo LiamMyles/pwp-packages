@@ -1,13 +1,13 @@
 import { type NGonMetadata } from "MatrixCalculations/calcLineDensity"
 
-import type { INGonBuilderPublic, Vertices } from "../n-gon.types"
+import type { INGonBuilderPublic, VerticesMatrix } from "CommonTypes"
 
 export abstract class NGonBase implements INGonBuilderPublic {
   private recalculateVertices: boolean
   private recalculateNGonMetadata: boolean
 
   protected NGonMetadata?: NGonMetadata
-  protected verticesMatrix: Vertices[] = []
+  protected verticesMatrix: VerticesMatrix = []
 
   constructor() {
     this.recalculateVertices = true
@@ -34,9 +34,9 @@ export abstract class NGonBase implements INGonBuilderPublic {
     }
   }
 
-  protected abstract calculateVertices(): Vertices[]
+  protected abstract calculateVertices(): VerticesMatrix
 
-  getVerticesMatrix(): Vertices[] {
+  getVerticesMatrix(): VerticesMatrix {
     if (this.recalculateVertices === true) {
       this.verticesMatrix = this.calculateVertices()
       this.recalculateVertices = false

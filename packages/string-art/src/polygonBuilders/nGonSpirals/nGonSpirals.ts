@@ -1,14 +1,14 @@
 import { calcJumpedMatrix } from "MatrixCalculations/calcJumpedMatrix"
 import { calcNGonVertices } from "MatrixCalculations/calcNGonVertices"
 import { calcSpiral } from "MatrixCalculations/calcSpiral"
-import type { VerticesMatrix } from "MatrixCalculations/types"
 
 import type {
   INGonJumps,
   INGonSpirals,
   INGonVertices,
   NGonInputs,
-} from "PolygonBuilders/n-gon.types"
+  VerticesMatrix,
+} from "CommonTypes"
 import { NGonBase } from "PolygonBuilders/nGonBase"
 
 export class NGonSpirals
@@ -19,7 +19,7 @@ export class NGonSpirals
   vertices: number
   reduction: number
   showMirror: boolean
-  initialMatrix: VerticesMatrix[] = [{ x: 0, y: 0 }]
+  initialMatrix: VerticesMatrix = [{ x: 0, y: 0 }]
 
   constructor({
     vertices,

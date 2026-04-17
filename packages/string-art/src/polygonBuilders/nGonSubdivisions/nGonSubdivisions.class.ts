@@ -6,7 +6,6 @@ import {
 import { calcNGonVertices } from "MatrixCalculations/calcNGonVertices"
 import { calcPointsMatrix } from "MatrixCalculations/calcPointsMatrix"
 import { calcSubdivisionMatrix } from "MatrixCalculations/calcSubdivisionMatrix"
-import type { VerticesMatrix } from "MatrixCalculations/types"
 
 import { NGonBase } from "PolygonBuilders/nGonBase"
 import type {
@@ -14,8 +13,8 @@ import type {
   INGonJumps,
   INGonSubdivided,
   NGonInputs,
-  Vertices,
-} from "PolygonBuilders/n-gon.types"
+  VerticesMatrix,
+} from "CommonTypes"
 
 export class NGonSubdivisions
   extends NGonBase
@@ -35,8 +34,8 @@ export class NGonSubdivisions
   }
 
   autoPoints = false
-  subdivisionMatrix: VerticesMatrix[] = [{ x: 0, y: 0 }]
-  initialMatrix: VerticesMatrix[] = [{ x: 0, y: 0 }]
+  subdivisionMatrix: VerticesMatrix = [{ x: 0, y: 0 }]
+  initialMatrix: VerticesMatrix = [{ x: 0, y: 0 }]
 
   setSubdivisions(subdivisions: number): void {
     this.subdivisions = subdivisions
@@ -66,7 +65,7 @@ export class NGonSubdivisions
       jumps: this.jumps,
     })
   }
-  protected calculateVertices(): Vertices[] {
+  protected calculateVertices(): VerticesMatrix {
     const initialMatrix = calcNGonVertices(this.vertices)
 
     const jumpedMatrix = calcJumpedMatrix(initialMatrix, ...this.jumps)

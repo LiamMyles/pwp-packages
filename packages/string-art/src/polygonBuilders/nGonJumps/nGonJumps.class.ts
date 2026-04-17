@@ -8,9 +8,9 @@ import { calcNGonVertices } from "MatrixCalculations/calcNGonVertices"
 import type {
   NGonInputs,
   INGonVertices,
-  Vertices,
+  VerticesMatrix,
   INGonJumps,
-} from "../n-gon.types"
+} from "CommonTypes"
 
 import { NGonBase } from "PolygonBuilders/nGonBase"
 
@@ -43,7 +43,7 @@ export class NGonJumps extends NGonBase implements INGonJumps, INGonVertices {
     })
   }
 
-  protected calculateVertices(): Vertices[] {
+  protected calculateVertices(): VerticesMatrix {
     const initialMatrix = calcNGonVertices(this.vertices)
     return calcJumpedMatrix(initialMatrix, ...this.jumps)
   }

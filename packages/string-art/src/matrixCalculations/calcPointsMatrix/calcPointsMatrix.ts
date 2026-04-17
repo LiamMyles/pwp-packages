@@ -1,12 +1,12 @@
-import type { VerticesMatrix } from "MatrixCalculations/types"
+import type { VerticesMatrix } from "CommonTypes"
 
 export function calcPointsMatrix(
   vertices: number,
   subdivisions: number,
   points: number,
-  subdivisionMatrix: VerticesMatrix[],
+  subdivisionMatrix: VerticesMatrix,
   ...jumps: number[]
-): VerticesMatrix[] {
+): VerticesMatrix {
   let totalPoints = vertices * subdivisions
   if (jumps.length !== 0) {
     totalPoints = jumps.length * vertices * subdivisions

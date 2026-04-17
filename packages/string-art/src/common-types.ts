@@ -7,14 +7,18 @@ export interface Vertex {
 
 export type VerticesMatrix = Vertex[]
 
-// Vertices, Subdivisions, Points
+/**
+ * Vertices, Subdivisions, Points
+ */
 export interface VSP {
   vertices: number
   subdivisions: number
   points: number
 }
 
-// Vertices, Subdivisions, Points, Jumps
+/**
+ * Vertices, Subdivisions, Points, Jumps
+ */
 export interface VSPJ extends VSP {
   jumps: number[]
 }
@@ -26,9 +30,10 @@ export interface NGonInputs {
   points: number
 }
 
-export interface INGonBuilderPublic {
+export interface INGonBasePublic {
   getNGonMetadata(): NGonMetadata
   getVerticesMatrix(): VerticesMatrix
+  getRawVerticesMatrix(): VerticesMatrix
 }
 
 export interface INGonVertices {

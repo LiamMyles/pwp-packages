@@ -1,8 +1,8 @@
 import { type NGonMetadata } from "MatrixCalculations/calcLineDensity"
 
-import type { INGonBuilderPublic, VerticesMatrix } from "CommonTypes"
+import type { INGonBasePublic, VerticesMatrix } from "CommonTypes"
 
-export abstract class NGonBase implements INGonBuilderPublic {
+export abstract class NGonBase implements INGonBasePublic {
   private recalculateVertices: boolean
   private recalculateNGonMetadata: boolean
 
@@ -36,7 +36,11 @@ export abstract class NGonBase implements INGonBuilderPublic {
 
   protected abstract calculateVertices(): VerticesMatrix
 
-  getVerticesMatrix(): VerticesMatrix {
+  /**
+   * Get the raw vertices matrix that doesn't take into account the chance of repeated patterns.
+   *
+   */
+  getRawVerticesMatrix(): VerticesMatrix {
     if (this.recalculateVertices === true) {
       this.verticesMatrix = this.calculateVertices()
       this.recalculateVertices = false
@@ -44,5 +48,21 @@ export abstract class NGonBase implements INGonBuilderPublic {
     } else {
       return this.verticesMatrix
     }
+  }
+
+  /**
+   * Get the subset of the VerticesMatrix that doesn't repeat. Which is calculated by lineDensity
+   *
+   * This creates a cleaner effect when drawn, as getRawVerticesMatrix can sometimes loop over itself
+   *
+   */
+  getVerticesMatrix(): VerticesMatrix {
+    const { lineDensity } = this.getNGonMetadata()
+
+    const miniumVerticesMatrix = this.getRawVerticesMatrix().slice(
+      0,
+      lineDensity,
+    )
+    return miniumVerticesMatrix
   }
 }

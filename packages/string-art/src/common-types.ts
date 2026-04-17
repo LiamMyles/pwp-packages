@@ -1,8 +1,22 @@
 import type { NGonMetadata } from "MatrixCalculations/calcLineDensity"
 
-export interface Vertices {
+export interface Vertex {
   x: number
   y: number
+}
+
+export type VerticesMatrix = Vertex[]
+
+// Vertices, Subdivisions, Points
+export interface VSP {
+  vertices: number
+  subdivisions: number
+  points: number
+}
+
+// Vertices, Subdivisions, Points, Jumps
+export interface VSPJ extends VSP {
+  jumps: number[]
 }
 
 export interface NGonInputs {
@@ -14,7 +28,7 @@ export interface NGonInputs {
 
 export interface INGonBuilderPublic {
   getNGonMetadata(): NGonMetadata
-  getVerticesMatrix(): Vertices[]
+  getVerticesMatrix(): VerticesMatrix
 }
 
 export interface INGonVertices {

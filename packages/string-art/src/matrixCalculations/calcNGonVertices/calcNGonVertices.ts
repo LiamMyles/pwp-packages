@@ -1,7 +1,7 @@
 import _reverse from "lodash.reverse"
-import type { VerticesMatrix } from "MatrixCalculations/types"
+import type { VerticesMatrix } from "CommonTypes"
 
-export function calcNGonVertices(vertices: number): VerticesMatrix[] {
+export function calcNGonVertices(vertices: number): VerticesMatrix {
   const twoPi = Math.PI * 2
   const angleBetweenPoints = twoPi / vertices
 

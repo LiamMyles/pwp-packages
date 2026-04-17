@@ -1,9 +1,9 @@
-import type { VerticesMatrix } from "MatrixCalculations/types"
+import type { VerticesMatrix } from "CommonTypes"
 
 export function calcSubdivisionMatrix(
   subdivisions: number,
-  matrix: VerticesMatrix[]
-): VerticesMatrix[] {
+  matrix: VerticesMatrix,
+): VerticesMatrix {
   return matrix
     .map((_, index, passedMatrix) => {
       const startY = passedMatrix[index].y

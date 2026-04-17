@@ -1,10 +1,10 @@
-import type { VerticesMatrix } from "MatrixCalculations/types"
+import type { VerticesMatrix } from "CommonTypes"
 
 export function calcSpiral(
-  verts: VerticesMatrix[],
+  verts: VerticesMatrix,
   reduction: number,
-  isMirrored = false
-): VerticesMatrix[] {
+  isMirrored = false,
+): VerticesMatrix {
   const loopSize = isMirrored ? reduction * 2 : reduction
 
   const results = [...Array(loopSize + 1)].map((_, index) => {

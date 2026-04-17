@@ -18,7 +18,8 @@
     "paths": {
       "MatrixCalculations/*": ["./src/matrixCalculations/*"],
       "PolygonBuilders/*": ["./src/polygonBuilders/*"],
-      "Helpers/*": ["./src/helpers/*"]
+      "Helpers/*": ["./src/helpers/*"],
+      "CommonTypes": ["./src/common-types.ts"]
     }
   },
   "include": ["src", "draw-cli-demo.ts"]

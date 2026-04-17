@@ -1,4 +1,3 @@
-export type * from "./n-gon.types"
 export * from "./nGon"
 export * from "./nGonJumps"
 export * from "./nGonSpirals"

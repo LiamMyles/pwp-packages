@@ -7,15 +7,15 @@
   "license": "MIT",
   "homepage": "https://github.com/LiamMyles/pwp-packages/tree/main/packages/string-art",
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "prebuild": "pnpm run typecheck",
     "build": "tsdown",
+    "postbuild": "pnpm run typecheck",
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",

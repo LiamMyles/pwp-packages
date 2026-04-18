@@ -6,7 +6,7 @@ import {
   NGon,
   NGonJumps,
   type NGonBase,
-} from "./dist/index.mjs"
+} from "./dist/index.js"
 
 /**
  * This file demo's the behaviour of the built package to aid in development

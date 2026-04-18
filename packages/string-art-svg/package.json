@@ -1,7 +1,7 @@
 {
   "name": "@chthonic/string-art-svg",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "String art polygon SVG generator",
   "author": "Liam Myles",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp",
+    "release": "bumpp --commit 'Release string-art-svg v'",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {

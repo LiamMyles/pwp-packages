@@ -3,7 +3,7 @@ import { defineConfig } from "tsdown"
 export default defineConfig([
   {
     entry: ["src/svg-generator.ts"],
-    format: ["esm", "cjs"],
+    format: ["esm"],
     outDir: "dist",
     platform: "neutral",
     dts: {

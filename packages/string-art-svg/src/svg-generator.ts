@@ -2,9 +2,9 @@ import type { VerticesMatrix } from "@chthonic/string-art"
 
 interface SvgParams {
   verticesMatrix: VerticesMatrix
-  size: number
-  strokeWidth: number
-  strokeColour: string
+  size?: number
+  strokeWidth?: number
+  strokeColour?: string
 }
 
 /**
@@ -23,19 +23,43 @@ export function generateSVGFromVerticesMatrix({
   strokeWidth,
   strokeColour,
 }: SvgParams): string {
-  const scale = size * 2
-  const svgHeader = `<svg width="${size}" height="${size}" viewBox="${
-    scale * -1
-  } ${scale * -1} ${scale * 2} ${
-    scale * 2
-  }" xmlns="http://www.w3.org/2000/svg">`
-  const svgFooter = `</svg>`
+  const hasSize = size !== undefined
+  const hasStrokeWidth = strokeWidth !== undefined
+  const hasStrokeColour = strokeColour !== undefined
+  const scale = hasSize ? size * 2 : 150
 
-  const scaledPoints = verticesMatrix
-    .map((p) => `${p.x * scale},${-p.y * scale}`)
+  const svgHead = [
+    `<svg`,
+    hasSize ? `width="${size}" height="${size}"` : false,
+    `viewBox="${scale * -1} ${scale * -1} ${scale * 2} ${scale * 2}"`,
+    `xmlns="http://www.w3.org/2000/svg">`,
+  ]
+    .filter((item) => item !== false)
     .join(" ")
 
-  const polygon = `<polygon points="${scaledPoints}" fill="none" stroke="${strokeColour}" stroke-width="${strokeWidth}" />`
+  const minimizeCoordinate = (point: number) => {
+    const snapToZeroThreshold = 1e-9
+    if (Math.abs(point) < snapToZeroThreshold) return 0
+    return point.toFixed(2).replace(/\.00$/, "")
+  }
 
-  return `${svgHeader}\n  ${polygon}\n${svgFooter}`
+  const scaledPoints = verticesMatrix
+    .map(
+      (point) =>
+        `${minimizeCoordinate(point.x * scale)},${minimizeCoordinate(-point.y * scale)}`,
+    )
+    .join(" ")
+
+  const polygon = [
+    `<polygon`,
+    `points="${scaledPoints}"`,
+    `fill="none"`,
+    hasStrokeColour ? `stroke="${strokeColour}"` : false,
+    hasStrokeWidth ? `stroke-width="${strokeWidth}"` : false,
+    `/>`,
+  ]
+    .filter((item) => item !== false)
+    .join(" ")
+
+  return `${svgHead}\n  ${polygon}\n</svg>`
 }

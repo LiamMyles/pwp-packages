@@ -7,10 +7,7 @@
   "license": "MIT",
   "homepage": "https://github.com/LiamMyles/pwp-packages/tree/main/packages/string-art-svg",
   "exports": {
-    ".": {
-      "import": "./dist/svg-generator.js",
-      "require": "./dist/svg-generator.cjs"
-    },
+    ".": "./dist/svg-generator.js",
     "./package.json": "./package.json"
   },
   "bin": {
@@ -41,7 +38,5 @@
     "@chthonic/string-art": "workspace:*",
     "yargs": "^18.0.0"
   },
-  "main": "./dist/svg-generator.cjs",
-  "module": "./dist/svg-generator.js",
   "types": "./dist/svg-generator.d.cts"
 }

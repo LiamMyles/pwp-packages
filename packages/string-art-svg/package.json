@@ -22,7 +22,7 @@
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp --commit 'Release string-art-svg v'",
+    "release": "bumpp --commit 'Release string-art-svg v' --tag 'string-art-svg v{{version}}'",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
